@@ -1,0 +1,24 @@
+service: simple-sms
+
+provider:
+  name: aws
+  runtime: java8
+  stage: production
+  region: us-east-1
+  iamRoleStatements:
+    - Effect: "Allow"
+      Resource: "*"
+      Action:
+        - "sns:*"
+
+package:
+  artifact: target/serverless-simple-sms-1.0.jar
+
+functions:
+  sms:
+    handler: com.mojilala.simple_sms.serverless.Handler
+    events:
+      - http:
+          path: send
+          method: post
+          integration: lambda
