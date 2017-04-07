@@ -20,7 +20,7 @@ public class Handler implements RequestHandler<Map<String, Object>, String> {
         if (!body.containsKey("message") || !body.containsKey("phoneNumber"))
             return new ErrorResponse("message & phoneNumber body attributes cannot be blank!").toJson();
 
-        String senderId = (String) body.getOrDefault("senderId", "Mojilala");
+        String senderId = (String) body.getOrDefault("senderId", "MojiLaLa");
         String smsType = (String) body.getOrDefault("smsType", "Transactional");
 
         SimpleSMS simpleSMS = new SimpleSMS(senderId, smsType);
