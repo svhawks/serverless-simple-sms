@@ -1,6 +1,6 @@
 # Serverless Simple SMS
 
-Serverless service to send single SMS to the given phone number through a POST request.
+Serverless service to send single SMS to the given phone number using Amazon SNS Transactional SMS service through just a POST request. 
 
 ## Installation
 
@@ -18,7 +18,7 @@ Serverless service to send single SMS to the given phone number through a POST r
     {
     	"message": "enter text message here",
     	"phoneNumber": "+905391234567",
-    	"senderId": "Mojilala",
+    	"senderId": "MojiLaLa",
     	"smsType": "Transactional"
     }
 ```
@@ -43,7 +43,7 @@ If you publish a message that exceeds the size limit, Amazon SNS sends it as mul
 * __Transactional__ – (default) Critical messages that support customer transactions, such as one-time passcodes for multi-factor authentication. Amazon SNS optimizes the message delivery to achieve the highest reliability.
 
 ### senderId
-(Optional, default="Mojilala") For Sender ID, type a custom ID that contains up to 11 alphanumeric characters, including at least one letter and no spaces. The sender ID is displayed as the message sender on the receiving device. For example, you can use your business brand to make the message source easier to recognize.
+(Optional, default="MojiLaLa") For Sender ID, type a custom ID that contains up to 11 alphanumeric characters, including at least one letter and no spaces. The sender ID is displayed as the message sender on the receiving device. For example, you can use your business brand to make the message source easier to recognize.
 
 Support for sender IDs varies by country. For example, messages delivered to U.S. phone numbers will not display the sender ID. For the countries that support sender IDs, see [Supported Regions and Countries](http://docs.aws.amazon.com/sns/latest/dg/sms_supported-countries.html).
 
@@ -52,7 +52,7 @@ Support for sender IDs varies by country. For example, messages delivered to U.S
 
 * Lambda
 * API Gateway
-* SNS
+* SNS 
 
 ## Developed by
 
