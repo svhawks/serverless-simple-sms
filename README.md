@@ -13,7 +13,7 @@ Serverless service to send single SMS to the given phone number using Amazon SNS
 
 ## Usage
 
-* `POST https://******.execute-api.us-east-1.amazonaws.com/production/send` with following body (`senderId` and `smsType` are optional and default values of them are set below):
+* `POST https://******.execute-api.us-east-1.amazonaws.com/production/sms_aws` with following body (`senderId` and `smsType` are optional and default values of them are set below):
 ```
     {
     	"message": "enter text message here",
