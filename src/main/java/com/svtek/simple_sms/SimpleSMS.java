@@ -1,4 +1,4 @@
-package com.mojilala.simple_sms;
+package com.svtek.simple_sms;
 
 import com.amazonaws.ClientConfiguration;
 import com.amazonaws.services.sns.AmazonSNSClient;

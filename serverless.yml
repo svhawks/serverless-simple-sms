@@ -20,7 +20,7 @@ package:
 
 functions:
   aws:
-    handler: com.mojilala.simple_sms.serverless.Handler
+    handler: com.svtek.simple_sms.serverless.Handler
     description: Sends an SMS using aws-sns
     events:
       - http:

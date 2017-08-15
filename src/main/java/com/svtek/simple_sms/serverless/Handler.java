@@ -1,8 +1,8 @@
-package com.mojilala.simple_sms.serverless;
+package com.svtek.simple_sms.serverless;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
-import com.mojilala.simple_sms.SimpleSMS;
+import com.svtek.simple_sms.SimpleSMS;
 import org.apache.log4j.Logger;
 
 import java.util.Map;
@@ -20,7 +20,7 @@ public class Handler implements RequestHandler<Map<String, Object>, String> {
         if (!body.containsKey("message") || !body.containsKey("phoneNumber"))
             return new ErrorResponse("message & phoneNumber body attributes cannot be blank!").toJson();
 
-        String senderId = (String) body.getOrDefault("senderId", "MojiLaLa");
+        String senderId = (String) body.getOrDefault("senderId", "svtek");
         String smsType = (String) body.getOrDefault("smsType", "Transactional");
 
         SimpleSMS simpleSMS = new SimpleSMS(senderId, smsType);

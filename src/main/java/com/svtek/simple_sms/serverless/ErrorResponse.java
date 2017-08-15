@@ -1,4 +1,4 @@
-package com.mojilala.simple_sms.serverless;
+package com.svtek.simple_sms.serverless;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
