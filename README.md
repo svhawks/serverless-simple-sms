@@ -11,6 +11,8 @@ Serverless service to send single SMS to the given phone number using Amazon SNS
 5. `mvn package`
 6. Deploy with `serverless deploy`. You will see the service information displayed and end-point in it.
 
+__Note:__ Change deployment bucket.
+
 ## Usage
 
 * `POST https://******.execute-api.us-east-1.amazonaws.com/production/sms_aws` with following body (`senderId` and `smsType` are optional and default values of them are set below):
